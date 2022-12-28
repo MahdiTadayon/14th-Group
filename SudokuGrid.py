@@ -7,7 +7,6 @@ def turtleSetting(turt):
     turt.speed(0)
     turt.hideturtle()
 
-
 def penColorSize(line, turt):
     if(line==0 or line==9 ):
         turt.penup()
@@ -19,27 +18,24 @@ def penColorSize(line, turt):
         turt.penup()
         turt.pen(pencolor='gray', pensize=1)
 
-
 def setPen(xCor,yCor,turt):
     turt.penup()
-    turt.setpos(xCor , yCor)
+    turt.setpos(xCor, yCor)
     turt.pendown()
     turt.forward(360)
 
-
 def drawGrid(turt):
     for line in range(10):
-        penColorSize(line ,turt)
+        penColorSize(line, turt)
         setPen(-180, 180-40*line, turt)
     turt.penup()
     turt.right(90)
     for line in range(10):
-        penColorSize(line ,turt)
+        penColorSize(line, turt)
         setPen(-180+40*line, 180, turt)
     turt.penup()
 
-
-def drawDigit(grid , color ,turt):
+def drawDigit(grid, color, turt):
     for row, col in product(range(9), range(9)):
         if not grid[row][col] == 0  :
             xCor = -168 + col * 40
