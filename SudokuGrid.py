@@ -18,7 +18,7 @@ def penColorSize(line, turt):
         turt.penup()
         turt.pen(pencolor='gray', pensize=1)
 
-def setPen(xCor,yCor,turt):
+def setPen(xCor, yCor, turt):
     turt.penup()
     turt.setpos(xCor, yCor)
     turt.pendown()
