@@ -32,7 +32,7 @@ def cellConverter(cell):  # cells ---> 1 to 81
     col = cell % 9 -1 
     return row, col 
 
-# There is no 16-Clue Sudoku          # in 17 ta bayad dobare barresi beshe    
+# There is no 16-Clue Sudoku              
 # sudoku solver
 # generate sudoku table that include more than 16 clues 
 def puzzleGenerator(sudokuGrid, sudokuPuzzle, clue=17):    
