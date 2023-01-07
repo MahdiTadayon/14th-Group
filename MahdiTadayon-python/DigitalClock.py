@@ -7,26 +7,26 @@ turt_sec = turtle.Turtle()
 turt_min = turtle.Turtle()
 turt_hour = turtle.Turtle()
 # turtle_setting---------------------------------------
-def turtle_setting(turt,color,pensize):
+def turtle_setting(turt, color, pensize):
     turt.hideturtle()
     turt.speed(0)
-    turt.pen(pencolor=color,pensize=pensize)
+    turt.pen(pencolor=color, pensize=pensize)
 
-turtle_setting(turt_frame,'black',5)
-turtle_setting(turt_sec,'red',1)
-turtle_setting(turt_min,'green',1)
-turtle_setting(turt_hour,'blue',1)
+turtle_setting(turt_frame, 'black', 5)
+turtle_setting(turt_sec, 'red', 1)
+turtle_setting(turt_min, 'green', 1)
+turtle_setting(turt_hour, 'blue', 1)
 
-def up_setpos_down(turt,x,y):
+def up_setpos_down(turt, x, y):
     turt.up()
     turt.setpos(x, y)
     turt.down()
 # turtleFrame------------------------------------------
-up_setpos_down(turt_frame,-25,5)
-turt_frame.write('|',font=('Arial' , 40,'normal'))
+up_setpos_down(turt_frame, -25, 5)
+turt_frame.write('|',font=('Arial' , 40, 'normal'))
 up_setpos_down(turt_frame,50,5)
-turt_frame.write('|',font=('Arial' , 40,'normal'))
-up_setpos_down(turt_frame,-90,60)
+turt_frame.write('|',font=('Arial' , 40, 'normal'))
+up_setpos_down(turt_frame, -90, 60)
 
 turt_frame.forward(220)
 turt_frame.right(90)
@@ -45,9 +45,9 @@ tm_hour = localTime.tm_hour
 def writeTime(turt,tm,x,y):
     up_setpos_down(turt,x,y)
     if tm > 9 :
-        turt.write(tm,font=('Arial' , 40,'normal'))
+        turt.write(tm,font=('Arial' , 40, 'normal'))
     else :
-        turt.write('0{}'.format(tm),font=('Arial' , 40,'normal'))
+        turt.write('0{}'.format(tm),font=('Arial' , 40, 'normal'))
 # main-------------------------------------------------
 writeTime(turt_sec, tm_sec, 65, 0)
 writeTime(turt_min, tm_min, -10, 0)
