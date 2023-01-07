@@ -3,12 +3,12 @@
 string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # solution 1 ---> using for loop
-for even in range(0,len(string),2):
-    print(string[even],end="")
+for even in range(0, len(string), 2):
+    print(string[even], end="")
 
 print("")
-for odd in range(1,len(string),2):
-    print(string[odd],end="")
+for odd in range(1, len(string), 2):
+    print(string[odd], end="")
 
 print("")
 
