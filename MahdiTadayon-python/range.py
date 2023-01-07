@@ -22,7 +22,7 @@ if __name__ == "__main__" :
         print(f"{number:.2f}")
         
 
-    for char in alphabetical_range_generator('c','x',2):
+    for char in alphabetical_range_generator('c', 'x', 2):
         print(char)
     
     
