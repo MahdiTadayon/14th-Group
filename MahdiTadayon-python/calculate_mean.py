@@ -1,5 +1,5 @@
 # calculate mean of unknown number of integers(q or quit to stop entering data )
-Sum,count = (0,0) 
+Sum, count = (0, 0) 
 
 while(True):
     try :
