@@ -23,9 +23,9 @@ def up_setpos_down(turt, x, y):
     turt.down()
 # turtleFrame------------------------------------------
 up_setpos_down(turt_frame, -25, 5)
-turt_frame.write('|',font=('Arial' , 40, 'normal'))
-up_setpos_down(turt_frame,50,5)
-turt_frame.write('|',font=('Arial' , 40, 'normal'))
+turt_frame.write('|', font=('Arial' , 40, 'normal'))
+up_setpos_down(turt_frame, 50, 5)
+turt_frame.write('|', font=('Arial' , 40, 'normal'))
 up_setpos_down(turt_frame, -90, 60)
 
 turt_frame.forward(220)
@@ -42,12 +42,12 @@ tm_sec = localTime.tm_sec
 tm_min = localTime.tm_min
 tm_hour = localTime.tm_hour
 #------------------------------------------------------
-def writeTime(turt,tm,x,y):
-    up_setpos_down(turt,x,y)
+def writeTime(turt, tm, x, y):
+    up_setpos_down(turt, x, y)
     if tm > 9 :
         turt.write(tm,font=('Arial' , 40, 'normal'))
     else :
-        turt.write('0{}'.format(tm),font=('Arial' , 40, 'normal'))
+        turt.write('0{}'.format(tm), font=('Arial' , 40, 'normal'))
 # main-------------------------------------------------
 writeTime(turt_sec, tm_sec, 65, 0)
 writeTime(turt_min, tm_min, -10, 0)
