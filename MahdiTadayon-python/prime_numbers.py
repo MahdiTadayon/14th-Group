@@ -2,7 +2,7 @@
 # solution 1 
 for number in range(2, 1000):
     for divisor in range(2, number):
-        if (number  % divisor == 0):  
+        if not number % divisor :  
             break 
     else:
         print(number) 
