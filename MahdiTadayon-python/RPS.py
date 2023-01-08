@@ -6,17 +6,9 @@ def winner(choice1, choice2, rounD):
     concatChoice = choice1 + choice2
     if choice1 == choice2 :
         return 0, 0, rounD-1
-    elif 'rp' in concatChoice :
+    elif 'rp' in concatChoice or 'ps' in concatChoice or 'sr' in concatChoice  :
         return 0, 1, rounD
-    elif 'rs' in concatChoice :
-        return 1, 0, rounD
-    elif 'pr' in concatChoice :
-        return 1, 0, rounD
-    elif 'ps' in concatChoice :
-        return 0, 1, rounD
-    elif 'sr' in concatChoice :
-        return 0, 1, rounD
-    elif 'sp' in concatChoice :
+    elif 'rs' in concatChoice or 'pr' in concatChoice or 'sp' in concatChoice  :
         return 1, 0, rounD
 
 rpsDict ={'r':'Rock', 'p':'Paper', 's':'Scissors'}
