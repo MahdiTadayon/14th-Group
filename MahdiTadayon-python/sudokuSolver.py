@@ -192,12 +192,12 @@ if __name__ == "__main__":
     
     turt_digit = turtle.Turtle()
     turtleSetting(turt_digit)
-    drawDigit(solvedSudokuGrid, 'black', turt_digit)
+    drawDigit(grid=solvedSudokuGrid, color='black', turt_digit)
     sleep(4)
     turt_digit.clear()
-    drawDigit(sudokuPuzzleBackUp, 'black', turt_digit)
+    drawDigit(grid=sudokuPuzzleBackUp, color='black', turt_digit)
     sleep(4)
-    drawDigit(solvedSudokuPuzzle, 'green', turt_digit)
-    drawDigit(sudokuPuzzleBackUp, 'black', turt_digit)
+    drawDigit(grid=solvedSudokuPuzzle, color='green', turt_digit)
+    drawDigit(grid=sudokuPuzzleBackUp, color='black', turt_digit)
    
     turtle.mainloop()
