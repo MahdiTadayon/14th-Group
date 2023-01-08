@@ -16,8 +16,8 @@ def digitRemover(digit, posibleDigits):
 
 def sudokuRule (grid, row, col, posibleDigits):
     for i in range(9):    
-        posibleDigits = digitRemover(grid[row][i], posibleDigits)   # row rule
-        posibleDigits = digitRemover(grid[i][col], posibleDigits)   # col rule
+        posibleDigits = digitRemover(digit=grid[row][i], posibleDigits)   # row rule
+        posibleDigits = digitRemover(digit=grid[i][col], posibleDigits)   # col rule
     for i, j in product(range(squareStarter(row), squareStarter(row)+3), range(squareStarter(col), squareStarter(col)+3)):
         posibleDigits = digitRemover(grid[i][j], posibleDigits)     #square rule 
     
