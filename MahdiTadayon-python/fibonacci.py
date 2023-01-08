@@ -10,7 +10,6 @@ def factorial(number):
 if __name__ == "__main__" :
     while(True):
         try :
-             
             print(factorial(int(input())))
             break 
         except (ValueError, KeyboardInterrupt) :
