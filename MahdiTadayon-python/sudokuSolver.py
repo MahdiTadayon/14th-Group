@@ -19,7 +19,7 @@ def sudokuRule (grid, row, col, posibleDigits):
         posibleDigits = digitRemover(digit=grid[row][i], posibleDigits)   # row rule
         posibleDigits = digitRemover(digit=grid[i][col], posibleDigits)   # col rule
     for i, j in product(range(squareStarter(row), squareStarter(row)+3), range(squareStarter(col), squareStarter(col)+3)):
-        posibleDigits = digitRemover(grid[i][j], posibleDigits)     #square rule 
+        posibleDigits = digitRemover(digit=grid[i][j], posibleDigits)     #square rule 
     
     return posibleDigits
 
@@ -144,12 +144,12 @@ def setPen(xCor,yCor,turt):
 def drawGrid(turt):
     for line in range(10):
         penColorSize(line ,turt)
-        setPen(-180, 180-40*line, turt)
+        setPen(xCor=-180, yCor=180-40*line, turt)
     turt.penup()
     turt.right(90)
     for line in range(10):
         penColorSize(line ,turt)
-        setPen(-180+40*line, 180, turt)
+        setPen(xCor=-180+40*line, yCor=180, turt)
     turt.penup()
 
 
