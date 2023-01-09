@@ -16,10 +16,10 @@ def digitRemover(digit, posibleDigits):
 
 def sudokuRule (grid, row, col, posibleDigits):
     for i in range(9):    
-        posibleDigits = digitRemover(digit=grid[row][i], posibleDigits)   # row rule
-        posibleDigits = digitRemover(digit=grid[i][col], posibleDigits)   # col rule
+        posibleDigits = digitRemover(grid[row][i], posibleDigits)   # row rule
+        posibleDigits = digitRemover(grid[i][col], posibleDigits)   # col rule
     for i, j in product(range(squareStarter(row), squareStarter(row)+3), range(squareStarter(col), squareStarter(col)+3)):
-        posibleDigits = digitRemover(digit=grid[i][j], posibleDigits)     #square rule 
+        posibleDigits = digitRemover(grid[i][j], posibleDigits)     #square rule 
     
     return posibleDigits
 
@@ -144,12 +144,12 @@ def setPen(xCor,yCor,turt):
 def drawGrid(turt):
     for line in range(10):
         penColorSize(line ,turt)
-        setPen(xCor=-180, yCor=180-40*line, turt)
+        setPen(xCor=-180, yCor=180-40*line, turt=turt)
     turt.penup()
     turt.right(90)
     for line in range(10):
         penColorSize(line ,turt)
-        setPen(xCor=-180+40*line, yCor=180, turt)
+        setPen(xCor=-180+40*line, yCor=180, turt=turt)
     turt.penup()
 
 
@@ -192,12 +192,12 @@ if __name__ == "__main__":
     
     turt_digit = turtle.Turtle()
     turtleSetting(turt_digit)
-    drawDigit(grid=solvedSudokuGrid, color='black', turt_digit)
+    drawDigit(grid=solvedSudokuGrid, color='black', turt=turt_digit)
     sleep(4)
     turt_digit.clear()
-    drawDigit(grid=sudokuPuzzleBackUp, color='black', turt_digit)
+    drawDigit(grid=sudokuPuzzleBackUp, color='black', turt=turt_digit)
     sleep(4)
-    drawDigit(grid=solvedSudokuPuzzle, color='green', turt_digit)
-    drawDigit(grid=sudokuPuzzleBackUp, color='black', turt_digit)
+    drawDigit(grid=solvedSudokuPuzzle, color='green', turt=turt_digit)
+    drawDigit(grid=sudokuPuzzleBackUp, color='black', turt=turt_digit)
    
     turtle.mainloop()
